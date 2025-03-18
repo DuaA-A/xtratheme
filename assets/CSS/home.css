@@ -63,7 +63,6 @@ ul.nav-links{
 .nav-links a:hover::after {
     transform: scaleX(1);
 }
-
 .nav-links a:hover {
     color: var(--mainColor);
 }
@@ -79,18 +78,112 @@ ul.nav-links{
 }
 .main-content{
     position: relative;
-    width: 100%;
+    width: fit-content;
     top: 50%;
-    left: 0%;
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    display: inline;
+    margin: 0;
+    font-size: 70px;
+    overflow: hidden;
+    
 }
-.black-box, .yellow-box {
-    padding: 20px 40px;
-    font-size: 3rem;
+
+.black-box {
+    padding-bottom: 40px;
+    font-family:'Times New Roman', Times, serif;
+    overflow: hidden;
+    width: 50%;
+    position: relative;
+    display: inline-block;
+    left: 25%;
+    height: 130px;
+    padding: 0px 0px;
     font-weight: bold;
     text-align: center;
+    color: transparent;
+    right: 0%;
+    animation: reveal-text 2s linear forwards;
+    animation-delay: 1s;
+}
+
+.black-box::before{
+    content: '';
+    width: 0%;
+    height: 130px;
+    position: absolute;
+    background-color: black;
+    right: 0%;
+    top: 0;
+    animation:animate-text 2s ease-in-out backwards;
+}
+
+@keyframes animate-text{
+    0%{
+        width: 0%;
+        height: 130px;
+    }
+    50%{
+        width:100%;
+        height: 130px;
+    }
+    100%{
+        width: 0%;
+        height: 130px;
+    }
+}
+@keyframes reveal-text {
+    0% {
+        width: 50%;
+        background-color: white;
+        color: black;
+        height: 130px;
+    }
+    50%{
+        width: 50%;
+        background-color: white;
+        height: 130px;
+    }
+    100% {
+        width: 50%;
+        background-color: white;
+        color: black; 
+        height: 130px;
+    }
+}
+/*end of main */
+.services {
+    display: flex;
+    max-width: 100%;
+    position: relative;
+    /* top: 750px; */
+    justify-content: center;
+    /* left: 20%; */
+}
+.box {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    padding: 20px 30px;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    min-width: 200px; 
+}
+.black {
+    background-color: black;
+    color: white;
+}
+.yellow{
+    background-color: var(--mainColor);
+}
+.light-yellow{
+    background-color: var(--secondColor);
+}
+.lighter-yellow{
+    background-color: var(--thirdColor);
+}
+.arrow{
+    /* background-color: black; */
+    /* color: #FFD426 */
 }
