@@ -21,6 +21,11 @@
   color: white;
 }
 
+a {
+  text-decoration: none;
+  /* color: white; */
+}
+
 ul {
   list-style: none;
 }
@@ -40,7 +45,7 @@ header {
       rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0.1)
     ),
-    url(../assets/brd.jpg);
+    url(/assets/imgs/brd.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -152,6 +157,38 @@ header h1 {
   margin-bottom: 100px;
 }
 
+main {
+  margin: 30vb 0;
+  height: auto;
+}
+
+.intro {
+  /* background-color: #010101; */
+  margin: 30vb 30vb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.intro p {
+  margin-top: 10vb;
+  width: 100%;
+  text-align: center;
+  font-size: 2.3em;
+  font-weight: 600;
+}
+
+.intro i {
+  font-size: 3em;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  color: var(--accent);
+}
+
 section {
   display: grid;
   grid-template-columns: repeat(3, minmax(250px, 1fr));
@@ -160,7 +197,7 @@ section {
   align-items: center;
   /* align-content: center; */
   gap: 25px 25px;
-  margin: 20vb 15vb;
+  margin: 10vb 15vb;
 }
 
 .card {
@@ -332,6 +369,90 @@ section {
     -o-transform: rotateY(0deg);
   }
 } */
+
+#questions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #010101; */
+  width: 150vb;
+  margin: 0 auto;
+}
+
+#questions a {
+  display: flex;
+  gap: 5vb;
+  padding: 5vb 5vb;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#questions * p {
+  /* background-color: aliceblue; */
+  /* width: 70%; */
+  font-weight: 600;
+  font-size: 1.4em;
+}
+
+#questions div i {
+  padding: 15px 17px;
+  font-size: 1.2em;
+}
+
+#questions .any {
+  background-color: var(--black);
+}
+.any p {
+  color: white;
+}
+#questions .any i {
+  background-color: var(--accent);
+  color: black;
+}
+
+#questions .phone {
+  background-color: var(--accent);
+  flex-grow: 2;
+}
+.phone p {
+  color: black;
+}
+
+#questions .phone i {
+  background-color: var(--black);
+  color: var(--accent);
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+}
+
+#questions .email {
+  background-color: #eeeeee;
+}
+.email p {
+  color: black;
+}
+#questions .email i {
+  background-color: var(--accent);
+  color: var(--black);
+}
+
+#questions a {
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+#questions a:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
 
 #yellowFooter {
   background-color: var(--accent);
