@@ -1,0 +1,115 @@
+:root{
+    --mainColor:#FFD426;
+    --secondColor:#FFDF61;
+    --thirdColor:#ffe57f;
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+#yellowFooter {
+    margin-top: 200px;
+    background-color: var(--mainColor);
+    height: 75vb;
+    display: flex;
+    flex-direction: column;
+    /* gap: 3vb; */
+  }
+  
+  #footerLogo {
+    background-color: #010101;
+    width: 30vb;
+    text-align: center;
+    margin: 0 auto;
+    vertical-align: middle;
+    height: 260px;
+    padding-top: 30px;
+    transform: translateY(-40%);
+    -webkit-transform: translateY(-40%);
+    -moz-transform: translateY(-40%);
+    -ms-transform: translateY(-40%);
+    -o-transform: translateY(-40%);
+  }
+  
+  #footerLogo img {
+    margin-top: 13vb;
+    width: 18vb;
+  }
+  
+  #linkList {
+    margin: -10px auto;
+    display: flex;
+    gap: 3vb;
+  }
+  
+  #linkList li {
+    background-color: black;
+    color: white;
+    padding: 15px 17px;
+    font-size: 1.2em;
+    transition: 300ms;
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -ms-transition: 300ms;
+    -o-transition: 300ms;
+  }
+  
+  #linkList li:hover {
+    background-color: white;
+    color: #010101;
+    cursor: pointer;
+    font-weight: 800;
+  }
+  
+  #linkList i {
+    transition: 300ms;
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -ms-transition: 300ms;
+    -o-transition: 300ms;
+  }
+  
+  #linkList li:hover > i {
+    transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    -moz-transform: rotateY(360deg);
+    -ms-transform: rotateY(360deg);
+    -o-transform: rotateY(360deg);
+  }
+  
+  #location {
+    margin: auto;
+    display: flex;
+    gap: 4vb;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    padding: 3vb;
+  }
+  
+  #location .logo i {
+    scale: 1.3;
+    transition: 100ms;
+    -webkit-transition: 100ms;
+    -moz-transition: 100ms;
+    -ms-transition: 100ms;
+    -o-transition: 100ms;
+  }
+  
+  #location:hover > .logo i {
+    scale: 1.6;
+  }
+  
+  #blackFooter {
+    background-color: black;
+    height: 11vb;
+    text-align: center;
+    color: gray;
+  }
+  
+  #blackFooter p {
+    height: 100%;
+    padding-top: 5vb;
+  }

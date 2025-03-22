@@ -1,0 +1,399 @@
+
+:root{
+    --mainColor:#FFD426;
+    --secondColor:#FFDF61;
+    --thirdColor:#ffe57f;
+    
+}
+.container{
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+@media (min-width: 768px) {
+.container{
+    width: 760px;
+}    
+}
+@media (min-width: 992px) {
+.container{
+    width: 970px;
+}    
+}
+@media (min-width: 1200px) {
+.container{
+    width: 1170px;
+}    
+}
+.header{
+    position: absolute;
+    z-index: 2;
+}
+/* header */
+.header .container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 50px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(255,255,255,0));
+    z-index: 10;
+}
+.logo img{
+    width: 120px;
+}
+
+ul.nav-links{
+    display: flex;
+    gap:30px;
+    list-style: none;
+
+}
+/* .nav-links li{
+    display: inline-block;
+} */
+.nav-links a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+
+}
+.nav-links a.active {
+    color: var(--mainColor);
+    
+}
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 30%;
+    height: 2px;
+    background:var(--mainColor);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
+}
+
+.nav-links a:hover {
+    color: var(--mainColor);
+}
+.nav-links a.active::after{
+    transform: scale(1);
+}
+/* end header */
+
+/* hero section */
+.hero{
+
+    background-image: url('../imgs/brd.jpg');
+    
+    height: 60vh;
+    position:relative;
+    margin-top: 0;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center bottom;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+ 
+}
+.hero h1{
+    font-size: 3em;
+    color: white;
+    margin-bottom: 60px;
+    
+    
+}
+@media (max-width: 992px) {
+    .hero h1 {
+        font-size: 2.5em;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 50vh;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+}
+/* end hero section */
+/* start shops card */
+.shop-cards{
+    margin-top: 100px;
+}
+.shop-cards .container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.shop-cards .container .headers{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.shop-cards .container .headers .show-res{
+    border-bottom: 5px solid var(--mainColor);
+
+
+}
+.shop-cards .container .headers .show-res p{
+    color:#333333;
+    font-size: 1em;
+    font-weight:200;
+    font-family: sans-serif;
+    margin-bottom: 5px;
+
+}
+.shop-cards .container .headers .dropdown{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.shop-cards .container .headers .dropdown .num select,
+ .shop-cards .container .headers .dropdown .famous select{
+    color: #333333;
+    font-size: 1em;
+    font-weight:200;
+    font-family: sans-serif;
+    margin-bottom: 5px;
+    background-color: white;
+    border: 3px solid black;
+    padding:  10px;
+}
+
+.shop-cards .container .headers .dropdown .num select:focus,
+ .shop-cards .container .headers .dropdown .famous select:focus{
+    border: 3px solid var(--mainColor);
+ }
+.shop-cards .container .cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+.shop-cards .container .cards .card{
+    position: relative;
+    cursor: pointer;
+}
+.shop-cards .container .cards .card:hover .btns{
+    display: block;
+} 
+
+.shop-cards .container .cards .card .image{
+    width: 100%;
+    border: 4px solid black;
+}
+.shop-cards .container .cards .card  .price{
+    position:absolute;
+  top: 15px;
+  right: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: sans-serif;
+
+
+
+}
+.shop-cards .container .cards .card  del{
+    color: #777;
+    font-size: 10px;
+    margin-right:5px;
+}
+.shop-cards .container .cards .card  .discount{
+    position:absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 10px;
+    font-weight: bold;
+    font-family: sans-serif;
+    padding: 10px;
+    background-color: var(--mainColor);
+}
+.shop-cards .container .cards .card  .card-name{
+    text-align: center;
+    font-size: 1.8em;
+    margin-right: 100px;
+    font-weight: bold;
+    
+}
+.shop-cards .container .cards .card  .btns{
+  display: none;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+
+}
+.shop-cards .container .cards .card  .btns .icons{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    animation:show-icons 0.5s;
+    -webkit-animation:show-icons 0.5s;
+}
+.shop-cards .container .cards .card  .btns .icons i{
+padding: 12px;
+}
+
+.shop-cards .container .cards .card  .btns .icons i:hover{
+background-color: var(--mainColor);
+border: 2px solid black;
+padding: 10px;
+}
+
+
+.shop-cards .container .cards .card  .btns button{
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border: 3px solid black;
+    transition: 0.5s;
+    cursor: pointer;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    animation:  show-btn 0.5s;
+    -webkit-animation:  show-btn 0.5s;
+    margin-left: 10px;
+
+}
+.shop-cards .container .cards .card  .btns button:hover{
+background-color: var(--mainColor);
+}
+.shop-cards .container .pages{
+    margin-top: 50px;
+    text-align: center;
+}
+.shop-cards .container .pages button{
+  padding: 20px 30px;
+  border: 3px solid black;
+  font-size: 1em;
+  margin-right: 10px;
+  background-color: white;
+  cursor: pointer;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.shop-cards .container .pages button:hover{
+background-color: black;
+color: white;
+
+}
+.shop-cards .container .pages .active{
+background-color: black;
+color: white;
+}
+
+@keyframes show-btn 
+{
+    from{
+        opacity: 0;
+
+}
+    to{
+        opacity: 1;
+   
+}
+}
+@keyframes show-icons {
+0%{
+    opacity: 0;
+    transform: translateY(20px);
+    -webkit-transform: translateY(20px);
+    -moz-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    -o-transform: translateY(20px);
+}
+50%{
+    opacity: 0.5;
+    transform: translateY(10);
+    -webkit-transform: translateY(10);
+    -moz-transform: translateY(10);
+    -ms-transform: translateY(10);
+    -o-transform: translateY(10);
+}
+100%{
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+@media (max-width: 768px) {
+    .shop-cards .container .headers {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        justify-content: center;
+    }
+    .shop-cards .container .headers .famous{
+        padding: ;
+    }
+
+
+    .shop-cards .container .headers .dropdown {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .shop-cards .container .cards {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .shop-cards .container .cards .card .card-name {
+        font-size: 1.5em;
+    }
+
+    .shop-cards .container .pages button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .shop-cards .container .cards {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+    }
+
+    .shop-cards .container .cards .card .card-name {
+        font-size: 1.2em;
+    }
+
+    .shop-cards .container .pages button {
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+}
+/* end shops card */
