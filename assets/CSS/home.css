@@ -91,7 +91,7 @@ ul.nav-links{
     display: inline;
     margin: 0;
     font-size: 100px;
-    white-space: nowrap;
+    
 }
 
 .black-box {
@@ -102,18 +102,38 @@ ul.nav-links{
     position: relative;
     display: inline-block;
     left: 25%;
-    height: 160px;
+    height: 130px;
     padding: 0px;
-    padding-bottom: 30px;
-    
+    padding-bottom: 50px;
+    white-space: nowrap;
     text-align: center;
     color: transparent;
     right: 0%;
     animation: reveal-text 2s linear forwards;
     animation-delay: 1s;
 }
-
-.black-box::before{
+.yellow-box{
+    font-size: 30px;
+    font-family:'Times New Roman', Times, serif;
+    overflow: hidden;
+    width: 50%;
+    /* padding: 10px; */
+    position: absolute;
+    display: inline-block;
+    left: 75%;
+    height: 60px;
+    padding: 0px;
+    text-align: center;
+    padding-top: 15px;
+    top: 58%;
+    white-space: nowrap;
+    text-align: center;
+    color: transparent;
+    
+    animation: reveal-text-yellow 2s linear forwards;
+    animation-delay: 1s;
+}
+.black-box::before {
     content: '';
     width: 0%;
     height: 130px;
@@ -127,37 +147,66 @@ ul.nav-links{
 @keyframes animate-text{
     0%{
         width: 0%;
-        height: 130px;
+        /* height: 130px; */
     }
     50%{
         width:100%;
-        height: 130px;
+        /* height: 130px; */
     }
     100%{
         width: 0%;
-        height: 130px;
+        color: transparent;
+        /* height: 130px; */
     }
 }
 
 @keyframes reveal-text {
     0% {
-        width: 50%;
+        /* width: 50%; */
         background-color: white;
         color: black;
-        height: 130px;
+        /* height: 130px; */
     }
     50%{
-        width: 50%;
+        /* width: 50%; */
         background-color: white;
-        height: 130px;
+        color: black;
+        /* height: 130px; */
+    }
+    100% {
+        /* width: 50%; */
+        background-color: white;
+        color: black; 
+        /* height: 130px; */
+    }
+}
+@keyframes reveal-text-yellow {
+    0% {
+        /* width: 0%; */
+        background-color: black;
+        color: white;
+        /* height: 130px;*/
     }
     100% {
         width: 50%;
-        background-color: white;
-        color: black; 
-        height: 130px;
+        background-color: black;
+        color: white; 
+        /* height: 130px; */
+
     }
 }
+.yellow-box::before {
+    content: '';
+    width: 0%;
+    height: 160px;
+    padding: 10px;
+    position: absolute;
+    background-color: var(--mainColor);
+    top: 0%;
+    left: 0px;
+    animation:animate-text 2s ease-in-out backwards;
+}
+
 /*end of main */
 
 .second-view{
