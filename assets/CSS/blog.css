@@ -155,9 +155,34 @@ header h1 {
   margin-bottom: 100px;
 }
 
+header nav ul .active {
+  color: var(--accent);
+}
+
+header nav ul .active::before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 2px;
+  background-color: var(--accent);
+  top: 90%;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+  transition: width 200ms ease-in;
+  -webkit-transition: width 200ms ease-in;
+  -moz-transition: width 200ms ease-in;
+  -ms-transition: width 200ms ease-in;
+  -o-transition: width 200ms ease-in;
+
+  width: 15px;
+}
+
 main {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: minmax(200px, 2fr) minmax(100px, 1fr);
   gap: 5vb;
   margin: 20vb 10vb;
 }
@@ -169,11 +194,9 @@ aside img {
 
 section {
   display: grid;
-  grid-template-columns: repeat(2, minmax(300px, 1fr));
+
   justify-content: center;
-  grid-template-rows: repeat(3, fit-content);
   align-items: center;
-  align-content: center;
   gap: 120px 50px;
   height: auto;
 }
@@ -195,6 +218,7 @@ section {
   -ms-transition: 2s;
   -o-transition: 2s;
   position: relative;
+  margin: 5vb 0;
 }
 
 .card img {
@@ -231,12 +255,13 @@ section {
   height: 100%;
   position: absolute;
   background-color: rgba(255, 255, 255, 0.664);
-
   z-index: 200;
   overflow: hidden;
-  /* opacity: 0; */
+  /*opacity: 0;
+  */
+
   transition: 200ms;
-  -webkit-transition: 200ms, background-color 10ms ease-in 50ms;
+  -webkit-transition: 200ms;
   -moz-transition: 200ms;
   -ms-transition: 200ms;
   -o-transition: 200ms;
@@ -280,6 +305,14 @@ section {
   left: calc(50% -25px);
   transform: scale(0);
   transition: 200ms;
+  -webkit-transition: 200ms;
+  -moz-transition: 200ms;
+  -ms-transition: 200ms;
+  -o-transition: 200ms;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
 }
 
 .card:hover > .cardIcon {
@@ -333,7 +366,7 @@ aside #search {
 }
 
 aside #search input {
-  /* width: 60%; */
+  min-width: 1vb;
   border: 3px solid black;
   padding: 2vb 3vb;
 }
@@ -345,6 +378,28 @@ aside #search button {
 }
 aside #search button:hover {
   background-color: var(--accent);
+}
+
+@media (min-width: 801px) {
+  section {
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    grid-template-rows: repeat(3, fit-content);
+  }
+}
+
+@media (max-width: 800px) {
+  .card {
+    grid-column: 1;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+  }
+  section {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, auto);
+    /* margin: 0 auto; */
+  }
 }
 
 #tags {
