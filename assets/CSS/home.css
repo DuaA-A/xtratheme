@@ -11,7 +11,7 @@
     font-family: 'Times New Roman', Times, serif;
 }
 ::selection {
-    background-color: #FFD426;
+    background-color: var(--mainColor);
     color: white;
 }
 nav{
@@ -91,8 +91,7 @@ ul.nav-links{
     display: inline;
     margin: 0;
     font-size: 100px;
-    overflow: hidden;
-    
+    white-space: nowrap;
 }
 
 .black-box {
@@ -255,7 +254,7 @@ a.about{
 .aboutTitle::before{
     content: "";
     display: inline-block;
-    width: 110px;
+    width: 120px;
     height:3px;
     background-color: var(--mainColor);
     margin: 0;
@@ -265,7 +264,7 @@ a.about{
 
 .aboutTitle{
     margin: 150px 0px 10px 0px;
-    font-size: 40px;
+    font-size: 35px;
     width: 50%;
     font-family: 'Times New Roman', Times, serif;
 }
@@ -523,15 +522,6 @@ a.projects{
 
 
 
-
-
-
-
-
-
-
-
-
 /* start teams */
 
 .team .container{
@@ -550,6 +540,7 @@ a.projects{
     flex-direction: column;
     justify-content: space-around;
     /* width: 50%; */
+    padding-left: 1.5%;
 }
 
 .team .container .left-part .para{
@@ -599,7 +590,10 @@ a.projects{
     display: flex;
     gap: 30px;
     width: 75%;
-    padding-right: 40px;
+    padding-right: 20px;
+    justify-content: space-around;
+    margin-right: 5%;
+
 }
 
 .container .team-cards .card{
@@ -607,6 +601,7 @@ position: relative;
 background-color: black;
 cursor: pointer;
 margin-right: 10px;
+
 transition: trnsform 0.5s ease, background-color 0.3s ease;
 -webkit-transition: trnsform 0.5s ease, background-color 0.3s ease;
 -moz-transition: trnsform 0.5s ease, background-color 0.3s ease;
@@ -706,15 +701,17 @@ transition: trnsform 0.5s ease, background-color 0.3s ease;
     }
 
     .team .container .left-part .contact {
-        margin: 0 auto; 
         display: flex;
         justify-content: center;
         align-items: center;
+        justify-content: space-around;
+        
     }
 
     .container .team-cards .card {
         width: 100%;
         max-width: 350px;
+        
     }
 
 }
@@ -746,21 +743,194 @@ transition: trnsform 0.5s ease, background-color 0.3s ease;
         text-align: center;
     }
 }
-
 /* end teams */
+
+/* start services */
+.services-section{
+    position:relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.services-section .row1, .row2{
+    display: flex;
+    gap: 2%;
+    margin: 0%;
+    padding: 0%;
+}
+.row2{
+    flex-direction: row-reverse;
+}
+.row2 .card.contact{
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: black;
+    color: white;
+    width: 620px;
+    font-size: 2.2em;
+    height: 270px;
+    padding:20px 12% 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.services-section .row1 .card .front, .row2 .card .front{
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: var(--mainColor);
+    color: black;
+    width: 370px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    gap: 7%;
+    transform-style: preserve-3d;
+    transition: 0.5s ease-in-out;
+    backface-visibility: hidden;
+    
+}
+.row1 .ourService{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: black;
+    color: white;
+    width: 620px;
+    padding: 110px 0;
+    font-size: 35px;
+    left: 0;
+    padding-right: 100px;
+    height: 270px;
+}
+
+.services-section  .ourService::before{
+    content: "";
+    display: inline-block;
+    width: 220px;
+    height:2px;
+    background-color: var(--mainColor);
+    margin: 0;
+    margin-right: 12px;
+    padding: 0;
+    vertical-align: middle;
+}
+.services-section .card.contact{
+    background: black;
+    color: var(--mainColor);
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+
+}
+
+
+a.services-button{
+    width: fit-content;
+    background-color: var(--mainColor);
+    padding: 10px;
+    padding-right: 5px;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.card.contact .arrow{
+    width: 10px;
+    padding:3px 5px;
+    font-size: 12px;
+    margin-left: 7px;
+}
+a.services-button:hover{
+    background-color: white;
+    scale: calc(1.1);
+}
+.card{
+    perspective: 500px;
+    transform-style: preserve-3d;
+    position: relative;
+    backface-visibility: hidden;
+
+}
+.back img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    filter: brightness(50%);
+    object-fit: cover;
+    transform: translateZ(-80px);
+    backface-visibility: hidden;
+}
+.back h2{
+    color: var(--mainColor);
+    
+}
+.front .title, .front .img{
+    transform: translateZ(50px);
+    backface-visibility: hidden;
+
+}
+.back p{
+    color: rgba(211, 211, 211, 0.901);
+    padding: 6%;
+}
+.card .back{
+    position: absolute;
+    width: 425px;
+    height: 320px;
+    top: -20px;
+    right: -26px;
+    padding: 5%;
+    /* margin-right: 30px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform-style: preserve-3d;
+    transform: translateZ(50px);
+    text-align: center;
+    /* vertical-align: middle; */
+    backface-visibility: hidden;
+    transform:  rotateY(180deg);
+    transition: 0.5s ease-in-out;
+    z-index: -1;
+}
+.row1 .card:hover .front{
+    transform:  rotateY(180deg);
+    
+}
+.row1 .card:hover .back{
+    transform: rotateY(360deg);
+    z-index: 10;
+    visibility: visible;
+}
+.card:hover .front{
+    transform:  rotateY(180deg);
+}
+.card:hover .back{
+    transform: rotateY(360deg);
+}
+
 
 /* start contact */
 
 .contact-us {
-    margin-top: 200px;
+    /* margin-top: 200px; */
     display: flex;
     justify-content: center;
 }
-
 .contact-us .container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: var(--mainColor);
     padding: 20px;
     margin-bottom: 200px;
@@ -833,7 +1003,8 @@ transition: trnsform 0.5s ease, background-color 0.3s ease;
         margin-top: 15px;
         gap: 20px;
         position: relative;
-left: 5px;    }
+    left: 5px;    
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -906,12 +1077,12 @@ left: 5px;    }
 }
 
 .stats-title {
-    background-color: #FFC700; /* Yellow background */
+    background-color: var(--mainColor); /* Yellow background */
     text-align: left;
     padding: 80px 0px;
     font-size: 30px;
     font-weight: bold;
-    margin-bottom: 15%;
+    margin-bottom: 25%;
 }
 
 .stats-title h2 {
@@ -932,21 +1103,22 @@ left: 5px;    }
     background-color: white;
 }
 
-.stats-content {
+.stats-title h2::after  {
+    content: "";
     background-color: black;
     position: absolute;
-    left: 50%;
-    width: max-content;
+    /* left: 33.7%; */
+    width: fit-content;
     color: white;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    padding:2.3% 5%;
-    margin: 0 auto;
-    gap: 20%;
-    top: 5600;
-    padding-right: 9%;
-    /* border-radius: 8px; */
+    padding:0 30px ;
+    /* width: 60%; */
+    /* height: 27%; */
+    /* margin: 0 auto; */
+    /* gap: 10%; */
+    /* top: 5563; */
 }
 
 .stat {
@@ -960,8 +1132,54 @@ left: 5px;    }
 }
 
 .stat p {
-    font-size: 20px;
-    margin-top: 26%;
+    font-size: 18px;
+    margin-top: 40%;
 }
 
-/* services */
+.loader{
+    position: absolute;
+    color: black;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: var(--mainColor);
+    padding: 2 9px;
+    font-weight: bold;
+}
+.topLeft{
+    top: 4900px;
+    left: 25%;
+    border: 7px solid black;
+
+}
+.topLeft::before{
+    content: "";
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 11px;
+    left: 11px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 2px solid var(--mainColor);
+    animation: load 2s ease infinite;
+}
+@keyframes load {
+    0%{
+        width: 40px;
+        height: 40px;
+        border: 1px solid var(--mainColor);
+        opacity: 1;
+        box-shadow: 10 0 0px var(--mainColor);
+    }
+
+    100%{
+        width: 60px;
+        height: 60px;
+        border:1px solid var(--mainColor);
+        box-shadow: 0 0 0px var(--mainColor);
+        opacity: 0.2;
+        
+    }
+}
+
