@@ -157,6 +157,31 @@ header h1 {
   margin-bottom: 100px;
 }
 
+header nav ul .active {
+  color: var(--accent);
+}
+
+header nav ul .active::before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 2px;
+  background-color: var(--accent);
+  top: 90%;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+  transition: width 200ms ease-in;
+  -webkit-transition: width 200ms ease-in;
+  -moz-transition: width 200ms ease-in;
+  -ms-transition: width 200ms ease-in;
+  -o-transition: width 200ms ease-in;
+
+  width: 15px;
+}
+
 main {
   overflow: hidden;
 
@@ -199,25 +224,24 @@ section {
   align-items: center;
   /* align-content: center; */
   gap: 25px 25px;
-  margin: 10vb 15vb;
+  margin: 10vb 10vb;
+}
+
+#ham {
+  display: none;
 }
 
 .card {
-  /*perspective-origin: right;
-  */
   perspective: 500px;
   transform-style: preserve-3d;
   width: 100%;
   height: 100%;
-  /*aspect-ratio: 1/1;
-  */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   align-content: center;
-  /*overflow: hidden;
-  */
+
   transition: transform 0.5s ease-out;
   -webkit-transition: transform 0.5s ease-out;
   -moz-transition: transform 0.5s ease-out;
@@ -326,6 +350,7 @@ section {
   /* animation: overboard 1s; */
   /* -webkit-animation: overboard 1s ease-out forwards; */
 }
+
 /* 
 @keyframes overboard {
   0% {
@@ -370,28 +395,25 @@ section {
     -ms-transform: rotateY(0deg);
     -o-transform: rotateY(0deg);
   }
-  } */
+} */
 
 #questions {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
   /* background-color: #010101; */
-  width: 150vb;
-  margin: 0 auto;
+  /* width: 150vb; */
 }
 
 #questions a {
   display: flex;
   gap: 5vb;
-  padding: 5vb 5vb;
-  justify-content: space-around;
+  padding: 5vb 10vb;
+  /* justify-content: space-between; */
   align-items: center;
 }
 
 #questions * p {
-  /* background-color: aliceblue; */
-  /* width: 70%; */
   font-weight: 600;
   font-size: 1.4em;
 }
@@ -469,6 +491,7 @@ section {
   padding: 2vb 3vb;
   font-size: 1.5em;
   font-weight: bold;
+  cursor: pointer;
 }
 
 #gallary .active {
@@ -562,9 +585,11 @@ section {
 }
 
 #choose div {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+
   position: absolute;
   color: white;
-  padding: 2vb;
+  padding: 3vb;
   background-color: #010101;
 }
 
@@ -674,4 +699,55 @@ section {
 #blackFooter p {
   height: 100%;
   padding-top: 5vb;
+}
+
+@media (max-width: 800px) {
+  section {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+    grid-template-rows: repeat(6, minmax(350px, 1fr));
+    gap: 0px;
+    height: fit-content;
+    margin: 10vb 5vb;
+  }
+
+  header #topPart {
+    background-color: var(--accent);
+  }
+
+  header #topPart nav {
+    display: none;
+  }
+
+  #ham {
+    display: block;
+    padding: 1.5vb 2vb;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+  }
+  header h1 {
+    margin-top: 20vb;
+    font-size: 2.5em;
+  }
+
+  #questions {
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+    margin: 10vb 5vb;
+    /* width: 100%; */
+  }
+
+  #gallary {
+    display: none;
+  }
+}
+
+@media (min-width: 801px) {
+  #questions {
+    justify-content: center;
+    align-items: center;
+    margin: 0 20vb;
+  }
 }
