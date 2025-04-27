@@ -5,32 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ْXtatheme</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/CSS/general.css">
     <link rel="stylesheet" href="../assets/CSS/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="../assets/CSS/general.css">
 </head>
 <body>
     <section class="first-view">
         <nav class="navbar">
             <div class="logo"> 
-                <a href="/html/home.html"><img src="../assets/imgs/logo3.png" alt="Logo" width="200px"></a>
+                <a href="/html/home.html"><img src="../assets/imgs/logo3.png" alt="Logo" ></a>
             </div>
-            <ul class="nav-links">
+            <div class="menu-icon" id="menu-icon">&#9776;</div> 
+            <ul class="nav-links" id="nav-links">
                 <li><a href="home.html" class="active">Home</a></li>
                 <li><a href="About.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="projects.html" >Projects</a></li>
+                <li><a href="projects.html">Projects</a></li>
                 <li><a href="FAQ.html">FAQ</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="shop.html">Shop</a></li>
-                <li><a href="Contact.html" >Contact</a></li>
+                <li><a href="Contact.html">Contact</a></li>
             </ul>
         </nav>
         <section class="main-content">
             <div class="black-box">Modern Bedroom</div>
             <div class="yellow-box">We Make Your Dreams Real!</div>
         </section>
+        <section class="hor-bar">
+            <ul class="bar-links">
+                <li><a href="home.html" class="active" >
+                    <i class="fas fa-home"></i>
+                    Home
+                </a></li>
+                <li><a href="About.html">
+                    <i class="fa-solid fa-user"></i>
+                    About
+                </a></li>
+                <li >
+                    <a href="projects.html">
+                    <i class="fa-solid fa-diagram-project"></i>
+                    Projects
+                </a></li>
+                <li>
+                    <a href="Contact.html">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    Contact
+                </a></li>
+            </ul>
+        </section>
+        <script>
+            const menuIcon = document.getElementById('menu-icon');
+            const navLinks = document.getElementById('nav-links');
+            menuIcon.addEventListener('click', () => {
+                navLinks.classList.toggle('show');
+            });
+        </script>
     </section>
+    
     <section class="second-view">
         <section class="services">
             <div class="box black">
@@ -47,22 +78,27 @@
                     <span class="arrow"><i class="fa fa-angle-right"></i></span> Exterior Design
                 </div>
             </div>
-            <div class="box light-yellow">
+            <div class="box lighter-yellow">
                 <div class="content">
                     <span class="arrow"><i class="fa fa-angle-right"></i></span> Architecture
                 </div>
             </div>
         </section>
         <section class="aboutUs">
+            <div class="line"> </div>
             <div class="leftSide">
-                <h3 class="aboutTitle">About Us</h3>
+                <div>
+                    <h3 class="aboutTitle">About Us</h3>
+                </div> 
                 <div class="contentAbout">
                     Interior design is the art and science of enhancing the interior of a building to achieve a healthier and more aesthetically pleasing environment for the people using the space. An interior designer is someone who plans, researches, coordinates, and manages such projects. Interior design is a multifaceted profession that includes conceptual development, space planning, site inspections, programming, research, communicating with the stakeholders of a project, construction management, and execution of the design.
                 </div>
-                <a href="/html/About.html" class="about">
-                    Read More
-                    <span class="arrow"><i class="fa fa-angle-right"></i></span>
-                </a>
+                <div class="more">
+                    <a href="/html/About.html" class="about">
+                        Read More
+                        <span class="arrow"><i class="fa fa-angle-right"></i></span>
+                    </a>
+                </div>
             </div>
             <div class="rightSide">
                 <div class="number">12</div>
@@ -71,6 +107,7 @@
         </section>
     </section>
     <section class="third-view">
+        <div class="line">hereeeeeeeeeeeee </div>
         <h3 class="works-title">
             Our Works
         </h3>
@@ -242,45 +279,6 @@
             </div> -->
         </div>
     </section>
-    
-    <!-- <section class="projectCards">
-        <div class="card">
-            <div class="front">
-                <i class="fa-solid fa-cube"></i>
-                <h1>Interior Design</h1>
-            </div>
-            <div class="back">
-                <img src="/assets/imgs/bedroom.jpg" alt="Bedroom">
-                <h2>Interior Design</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </div>
-        </div>
-    
-        <div class="card">
-            <div class="front">
-                <i class="fa-solid fa-cube"></i>
-                <h1>Interior Design</h1>
-            </div>
-            <div class="back">
-                <img src="/assets/imgs/bedroom.jpg" alt="Bedroom">
-                <h2>Interior Design</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </div>
-        </div>
-    
-        <div class="card">
-            <div class="front">
-                <i class="fa-solid fa-cube"></i>
-                <h1>Interior Design</h1>
-            </div>
-            <div class="back">
-                <img src="/assets/imgs/bedroom.jpg" alt="Bedroom">
-                <h2>Interior Design</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </div>
-        </div>
-    </section>
-    -->
 
 <div class="team">
     <h3 class="aboutTitle">Our Team </h3>
@@ -297,48 +295,48 @@
                 </p>
             </div>
         </div>
-    <div class="team-cards">
-        <div class="card">
-            <img src="../assets/imgs/m3.jpg" alt="" class="image">
-            <div class="info">
-                <h3 class="name">Mark Smith</h3>
-                <h6 class="job">Designer</h6>
+        <div class="team-cards">
+            <div class="card">
+                <img src="../assets/imgs/m3.jpg" alt="" class="image">
+                <div class="info">
+                    <h3 class="name">Mark Smith</h3>
+                    <h6 class="job">Designer</h6>
+                </div>
+                <div class="icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fa-solid fa-envelope"></i></a> 
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
-            <div class="icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fa-solid fa-envelope"></i></a> 
-                <a href="#"><i class="fab fa-instagram"></i></a>
+            <div class="card">
+                <img src="../assets/imgs/m5.jpg" alt="" class="image">
+                <div class="info">
+                    <h3 class="name">Jane Someone</h3>
+                    <h6 class="job">Designer</h6>
+                </div>
+                <div class="icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fa-solid fa-envelope"></i></a> 
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <img src="../assets/imgs/m5.jpg" alt="" class="image">
-            <div class="info">
-                <h3 class="name">Jane Someone</h3>
-                <h6 class="job">Designer</h6>
-            </div>
-            <div class="icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fa-solid fa-envelope"></i></a> 
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="../assets/imgs/m1.jpg" alt="" class="image">
-            <div class="info">
-                <h3 class="name">Amanda Care</h3>
-                <h6 class="job">Designer</h6>
-            </div>
-            <div class="icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fa-solid fa-envelope"></i></a> 
-                <a href="#"><i class="fab fa-instagram"></i></a>
+            <div class="card">
+                <img src="../assets/imgs/m1.jpg" alt="" class="image">
+                <div class="info">
+                    <h3 class="name">Amanda Care</h3>
+                    <h6 class="job">Designer</h6>
+                </div>
+                <div class="icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fa-solid fa-envelope"></i></a> 
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
         </div>
     </div>
-</div>
 </div>
 
 <section class="decorative">
