@@ -231,6 +231,11 @@ section {
   display: none;
 }
 
+.card-parent{
+
+  width: 100%;
+  height: 100%;
+}
 .card {
   perspective: 500px;
   transform-style: preserve-3d;
@@ -340,7 +345,7 @@ section {
   color: white;
 }
 
-.card:hover {
+.card-parent:hover .card {
   transform: rotateY(-180deg);
   -webkit-transform: rotateY(-180deg);
   -moz-transform: rotateY(-180deg);
