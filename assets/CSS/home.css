@@ -641,7 +641,7 @@ a.about{
     content: "";
     width: 11%;
     height:3px;
-    top: 10%;
+    top: 11%;
     background-color: var(--mainColor);
     margin: 0;
     left: 0%;
@@ -892,40 +892,71 @@ a.projects{
 
 
 /* start teams */
+.team{
+    /* justify-content: center; */
+    align-items: center;
+    /* width: 70%; */
+    margin:0% 14% ;
+}
 
 .team .container{
+    position: relative;
     display: flex;
-    gap: 60px;
+    gap: 10%;
 
 }
 
+.team #line::before{
+    position: absolute;
+    content: "";
+    width: 11%;
+    height:3px;
+    background-color: var(--mainColor);
+    margin-top: 8%;
+    left: 0%; 
+    margin-left: 3%;
+    vertical-align: middle;
+} 
+
+
+.ourTeam{
+    padding-top: 10%;
+    padding-left: 1%;
+    width: 100%;
+    /* margin: 3%; */
+    font-size: 30px;
+    /* left: 18%; */
+    font-family: 'Times New Roman', Times, serif;
+}
 .container{
-    padding-left: 6%;
+    /* padding-left: 6%; */
+    margin-bottom: 5%;
 }
 
 .team .container .left-part{
     margin-top: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    /* width: 50%; */
-    padding-left: 1.5%;
+    justify-content: space-evenly;
+    /* width: 90%; */
+    /* gap: 10%; */
+    padding-left:2%;
 }
 
 .team .container .left-part .para{
     font-size: 1.2em;
     line-height: 1.5;
     color: #777;
-    margin-bottom: 50px;
+    margin-bottom: 5%;
     font-weight: normal;
 }
 
 .container .left-part .contact{
     display: flex;
-    gap: 10px;
+    gap: 2%;
     background-color: black;
     width: fit-content;
-    padding: 15px ;
+    padding: 5% ;
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
@@ -953,11 +984,11 @@ a.projects{
 
 .container .team-cards{
     display: flex;
-    gap: 30px;
-    width: 75%;
-    padding-right: 20px;
+    gap: 3%;
+    width: 40%;
+    /* padding-right: 20px; */
     justify-content: space-around;
-    margin-right: 5%;
+    margin-right: 25%;
 
 }
 
@@ -965,8 +996,8 @@ a.projects{
 position: relative;
 background-color: black;
 cursor: pointer;
-margin-right: 10px;
-
+/* margin-right: 10px; */
+width: 250px;
 transition: trnsform 0.5s ease, background-color 0.3s ease;
 }
 
@@ -975,7 +1006,7 @@ transition: trnsform 0.5s ease, background-color 0.3s ease;
 }
 
 .container .team-cards .card .image{
-    width: 300px;
+    width: 250px;
     border: 30px solid black;
     filter:grayscale(100%);
     -webkit-filter:grayscale(100%);
@@ -984,7 +1015,7 @@ transition: trnsform 0.5s ease, background-color 0.3s ease;
 .container .team-cards .card  .info{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap:2%;
     padding: 20px;
     text-align: center;
     justify-content: center;
@@ -1132,10 +1163,10 @@ transition: trnsform 0.5s ease, background-color 0.3s ease;
     font-weight: bold;
     background: black;
     color: white;
-    width: 620px;
+    /* width: 620px; */
     font-size: 2.2em;
-    height: 270px;
-    padding:20px 12% 20px 20px;
+    /* height: 270px; */
+    padding:1% 13.3% 1% 2%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -1146,8 +1177,9 @@ transition: trnsform 0.5s ease, background-color 0.3s ease;
     font-weight: bold;
     background: var(--mainColor);
     color: black;
-    width: 370px;
-    height: 280px;
+    /* padding: 15%; */
+    width: 19.3em;
+    height: 14.5em;
     display: flex;
     flex-direction: column;
     justify-content:center;
@@ -1245,8 +1277,8 @@ a.services-button:hover{
 }
 .row2 .card .back, .row1 .card .back{
     position: absolute;
-    width: 425px;
-    height: 320px;
+    width: 26.5em;
+    height: 20em;
     top: -20px;
     right: -26px;
     padding: 7%;
