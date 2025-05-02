@@ -861,8 +861,11 @@ a.projects{
         display: flex;
         flex-direction: column;
     }
-
-    .img-container{
+    .second-section{
+        margin: 0;
+        width: 100%;
+    }
+    .img-container, .second-section .img-container{
         height: 400px;
         width: 100%;
     }
@@ -882,10 +885,23 @@ a.projects{
     .first-section{
         width: 100%;
     }
-    .text-content h3{
-        font-size: 20px;
+    .text-content{
+        font-size: 18px;
         width: 300px;
-        
+        align-items: center;
+    }
+    .text-content a.projects{
+        font-size: 14px;
+        margin-top: 50px;
+    }
+    .second-section .img-container img{
+        padding: 0;
+    }
+    .second-dotted{
+        width: 81%;
+        height: 32%;
+        left: 8%;
+        background-size: 15px 15px;
     }
 
 }
@@ -902,7 +918,7 @@ a.projects{
 .team .container{
     position: relative;
     display: flex;
-    gap: 10%;
+    gap: 2%;
 
 }
 
@@ -912,7 +928,7 @@ a.projects{
     width: 11%;
     height:3px;
     background-color: var(--mainColor);
-    margin-top: 8%;
+    margin-top: 8.5%;
     left: 0%; 
     margin-left: 3%;
     vertical-align: middle;
@@ -953,7 +969,7 @@ a.projects{
 
 .container .left-part .contact{
     display: flex;
-    gap: 2%;
+    gap: 1%;
     background-color: black;
     width: fit-content;
     padding: 5% ;
@@ -971,7 +987,7 @@ a.projects{
     text-transform: capitalize;
     margin-bottom: 0;
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1em;
     font-family: sans-serif;
 
 }
@@ -1205,7 +1221,7 @@ transition: trnsform 0.5s ease, background-color 0.3s ease;
 
 .services-section  .ourService::before{
     content: "";
-    display: inline-block;
+    position: absolute;
     width: 220px;
     height:2px;
     background-color: var(--mainColor);
@@ -1302,7 +1318,77 @@ a.services-button:hover{
 .card:hover .back{
     transform: rotateY(-360deg);
 }
-
+@media (max-width: 768px) {
+    .second-section .img-container{
+        margin-bottom: 40%;/*I can't fix this */
+    }
+    .services-section{
+        margin-top: 95%;/*I can't fix this */
+        position: relative;
+    }
+    
+    .row1{
+        flex-direction: column;
+    }
+    .row2{
+        flex-direction: column-reverse;
+    }
+    .row1 .ourService, .row2 .contact{
+        text-align: center;
+        padding-left: 10%;
+        font-size: 30px;
+        width: 95%;
+        /* padding: 15%; */
+    }
+    .ourService::before{
+        display: none;
+    }
+    .ourService .row1 #line::before{
+        position: absolute;
+        content: "";
+        width: 11%;
+        height:3px;
+        background-color: var(--mainColor);
+        top: 0%;
+        /* left: 41%;  */
+        /* margin-left: 3%; */
+        z-index: -1;
+        transform: rotate(90deg);
+    } 
+    .row1 .card .front,.row2 .card .front{
+        margin-left: 7%;
+    }
+    .row1 .card .back, .row2 .card .back{
+        margin-right: 4.5%;
+    }
+    .row1 .card{
+        margin-top: 5%;
+    }
+    .row2 .card{
+        margin-bottom: 5%;
+    }
+    .team{
+        position: relative;
+         margin-top: 90%; /*I can't fix this */
+    }
+    .row2 .card.contact{
+        width:fit-content;
+        padding: 15% 2%;
+        padding-right: 5%;
+        margin-bottom: 85%;/*I can't fix this */
+    }
+    .services-button{
+        margin-top: 8%;
+        margin-left: 6%;
+    }
+    .ourTeam{
+        text-align: center;
+    }
+    .team #line::before{
+        top: 2.5%;
+        left: 40%;
+    }
+}
 
 /* start contact */
 
@@ -1419,11 +1505,23 @@ a.services-button:hover{
 /* end contact */
 .decorative{
     /* height: 100vh; */
-    margin-top: 10%;
+    margin: 10%;
+    margin-bottom:0% ;
     /* display: block; */
 }
 
-
+.decorative #line::before{
+    position: absolute;
+    content: "";
+    width: 11%;
+    height:3px;
+    background-color: var(--mainColor);
+    margin-top: 8.5%;
+    left: 41%; 
+    margin-left: 3%;
+    z-index: -1;
+    transform: rotate(90deg);
+} 
 .decorTitle{
     text-align: center;
     position: relative;
@@ -1433,16 +1531,18 @@ a.services-button:hover{
 }
 .decorative .img-container {
     margin-top: 5%;
-    width: 85%;
+    padding-left: 2%;
+    width: 87%;
+    position: relative;
 }
 .big-dotted{
     position:absolute;
-    width: 80%;
-    height: 100%;
-    padding-left: 0%;
-    left: 5%;
+    width: 99%;
+    height: 95%;
+    /* padding-left: 10%; */
+    right: 6%;
     background-image: radial-gradient(black 1px, transparent 1.3px);
-    background-size: 20px 20px; 
+    background-size: 15px 15px; 
     z-index: -1;
 }
 .stats-container {
@@ -1451,15 +1551,16 @@ a.services-button:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30%;
+    gap: 20%;
     padding: 0 5% 0 0;
 }
 .right{
-    width: 48%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     background-color: black;
     padding: 0.5% 2%;
+    margin-right: 10.7%;
 }
 .stat-title {
     background-color: var(--mainColor); 
@@ -1523,28 +1624,28 @@ a.services-button:hover{
     font-weight: bold;
 }
 .topLeft{
-    top: 5700px;
-    left: 25%;
+    top: 22%;
+    left: 22%;
     border: 7px solid black;
 
 }
 .bottomLeft{
-    top: 6100px;
+    top: 74%;
     left: 32%;
     border: 7px solid black;
 }
 .loader.center{
-    top: 5800px;
-    left: 50%;
+    top: 70%;
+    left: 52%;
     border: 7px solid black;
 }
 .topRight{
-    top: 5650px;
-    left: 75%;
+    top: 36%;
+    left: 84%;
     border: 7px solid black;
 }
 .bottomRight{
-    top: 6000px;
+    top: 30%;
     left: 60%;
     border: 7px solid black;
 }
