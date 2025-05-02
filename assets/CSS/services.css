@@ -707,6 +707,9 @@ section {
 }
 
 @media (max-width: 800px) {
+  .intro {
+    margin: 20vb 5vb;
+  }
   section {
     grid-template-columns: repeat(1, minmax(200px, 1fr));
     grid-template-rows: repeat(6, minmax(350px, 1fr));

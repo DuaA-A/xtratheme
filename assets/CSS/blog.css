@@ -197,14 +197,13 @@ section {
 
   justify-content: center;
   align-items: center;
-  gap: 120px 50px;
   height: auto;
 }
 
 .card {
   width: 100%;
   height: 100%;
-  aspect-ratio: 4/5;
+  /* aspect-ratio: 4/5; */
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
@@ -222,7 +221,7 @@ section {
 }
 
 .card img {
-  height: 100%;
+  /* height: 100%; */
   /* z-index: -1; */
   width: 100%;
   flex-grow: 2;
@@ -247,7 +246,7 @@ section {
   padding: 5vb 3vb;
   vertical-align: center;
   z-index: 2;
-} */
+  } */
 
 .card img::before {
   content: "";
@@ -258,7 +257,7 @@ section {
   z-index: 200;
   overflow: hidden;
   /*opacity: 0;
-  */
+    */
 
   transition: 200ms;
   -webkit-transition: 200ms;
@@ -384,6 +383,7 @@ aside #search button:hover {
   section {
     grid-template-columns: repeat(2, minmax(100px, 1fr));
     grid-template-rows: repeat(3, fit-content);
+    gap: 120px 50px;
   }
 }
 
@@ -397,7 +397,9 @@ aside #search button:hover {
   }
   section {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(7, auto);
+    grid-template-rows: repeat(5, auto);
+    gap: 100px 0;
+
     /* margin: 0 auto; */
   }
 }
@@ -446,6 +448,11 @@ aside #search button:hover {
 #ads img {
   padding: 4vb;
 }
+
+footer {
+  margin-top: 150px;
+}
+
 #yellowFooter {
   background-color: var(--accent);
   height: 75vb;
@@ -475,7 +482,7 @@ aside #search button:hover {
 }
 
 #linkList {
-  margin: -10px auto;
+  margin: 10px auto;
   display: flex;
   gap: 3vb;
 }
@@ -539,12 +546,11 @@ aside #search button:hover {
 
 #blackFooter {
   background-color: black;
-  height: 11vb;
   text-align: center;
   color: gray;
 }
 
 #blackFooter p {
   height: 100%;
-  padding-top: 5vb;
+  padding: 5vb 0;
 }
