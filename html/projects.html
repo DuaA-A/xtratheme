@@ -6,26 +6,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Projects</title>
         <link rel="stylesheet" href="../assets/CSS/projects.css">
+        <link rel="stylesheet" href="../assets/CSS/nav&footer.css">
         <script src="https://kit.fontawesome.com/07943ce9e9.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <div id="topPart">
-            <div class="logo" id="logo"><img src="../assets/imgs/logo3.png" alt=""></div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="../index.html" >Home</a></li>
-                    <li><a href="About.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li class="active"><a href="projects.html" class="active">Projects</a></li>
-                    <li><a href="FAQ.html">FAQ</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="Contact.html" >Contact</a></li>
-                </ul>
-            </nav>
-
-        </div>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/html/home.html"><img src="/assets/imgs/logo3.png" alt="Logo"></a>
+            </div>
+            <div class="menu-icon" id="menu-icon">☰</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html"  class="active">Projects</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
         <h1>Projects</h1>
     </header>
     
@@ -94,5 +95,13 @@
         </div>
     </footer>
     
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.getElementById('nav-links');
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+    </script>
+
 </body>
 </html>

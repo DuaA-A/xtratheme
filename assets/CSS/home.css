@@ -10,10 +10,7 @@
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
 }
-::selection {
-    background-color: var(--mainColor);
-    color: white;
-}
+
 nav{
     position: absolute;
     top: 0;

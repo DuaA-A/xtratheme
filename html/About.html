@@ -7,30 +7,31 @@
     <link rel="stylesheet" href="../assets/fontawesome-free-6.6.0-web(1)/fontawesome-free-6.6.0-web/css/all.min.css">
     <link rel="stylesheet" href="../assets/CSS/general.css">
     <link rel="stylesheet" href="../assets/CSS/About.css">
+    <link rel="stylesheet" href="../assets/CSS/nav&footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/07943ce9e9.js" crossorigin="anonymous"></script>
 </head>
 <body>
-        <header class="header">
-            <div class="container">
-                    <div class="logo"> 
-                        <a href="/html/home.html"><img src="/assets/imgs/logo3.png" alt="Logo" width="200px"></a>
-                    </div>
-                    <ul class="nav-links">
-                        <li><a href="../index.html" >Home</a></li>
-                        <li><a href="About.html"class="active">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="projects.html" >Projects</a></li>
-                        <li><a href="FAQ.html">FAQ</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="shop.html">Shop</a></li>
-                        <li><a href="Contact.html" >Contact</a></li>
-                    </ul>
-                
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/html/home.html"><img src="/assets/imgs/logo3.png" alt="Logo"></a>
             </div>
-           
-        </header>
-        <div class="hero">
-            <h1>About</h1>
-        </div>
+            <div class="menu-icon" id="menu-icon">☰</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="About.html" class="active">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Blog</h1>
+    </header>
+
 <div class="about-us">
     <div class="main-head">
         <p>About Us</p>
@@ -193,5 +194,14 @@
         </p>
     </div>
 </footer>
+
+<script>
+    const menuIcon = document.getElementById('menu-icon');
+    const navLinks = document.getElementById('nav-links');
+    menuIcon.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+    });
+</script>
+
 </body>
 </html>

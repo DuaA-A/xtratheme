@@ -6,28 +6,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Services
         </title>
+        <link rel="stylesheet" href="../assets/CSS/nav&footer.css">
+
         <link rel="stylesheet" href="/assets/CSS/services.css" href="">
         <script src="https://kit.fontawesome.com/07943ce9e9.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <div id="topPart">
-            <div class="logo" id="logo"><img src="/assets/imgs/logo3.png" alt=""></div>
-            <button id="ham"><i class="fa -solid fa-bars"></i></button>
-            <nav>
-                <ul>
-                    <li><a href="home.html" >Home</a></li>
-                    <li><a href="About.html">About</a></li>
-                    <li><a href="services.html"  class="active">Services</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="FAQ.html">FAQ</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="Contact.html" >Contact</a></li>
-                </ul>
-            </nav>
-
-        </div>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/html/home.html"><img src="/assets/imgs/logo3.png" alt="Logo"></a>
+            </div>
+            <div class="menu-icon" id="menu-icon">☰</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
         <h1>Services</h1>
     </header>
 
@@ -37,90 +38,7 @@
                 come and visit us today!</p>
         </div>
         <section id="projectCards">
-<<<<<<< HEAD
-
-            <div class="cardContainer">
-            
-            <div class="card">
-
-                <div class="front">
-                    <i class="fa -solid fa-cube"></i>
-
-                    <h1>Interiour Design</h1>
-                </div>
-
-                <div class="back">
-                    <img src="/assets/imgs/bedroom.jpg" alt="">
-
-                    <h2>Interior Design</h2>
-
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur ex nulla expedita, officiis vitae,</p>
-                </div>
-
-            </div>
-            </div>
-
-            <div class="cardContainer">
-
-            <div class="card">
-                <div class="front">
-                    <i class="fa -solid fa-cube"></i>
-                    
-                    <h1>Home Decoration</h1>
-                    
-                </div>
-                <div class="back">
-                    <img src="/assets/imgs/bedroom.jpg" alt="">
-
-                    <h2>Home Decoration</h2>
-
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur ex nulla expedita, officiis vitae,</p>
-                </div>
-            </div>  
-            </div>
-
-            <div class="cardContainer">
-
-            
-            <div class="card">
-                <div class="front">
-                    <i class="fa -solid fa-cube"></i>
-                    
-                    <h1>Creative Designs</h1>
-                    
-                </div>
-                <div class="back">
-                    <img src="/assets/imgs/bedroom.jpg" alt="">
-
-                    <h2>Creative Designs</h2>
-
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur ex nulla expedita, officiis vitae,</p>
-                </div>
-            </div>  
-            </div>
-            <div class="cardContainer">
-        
-            <div class="card">
-                <div class="front">
-                    <i class="fa -solid fa-cube"></i>
-                    
-                    <h1>Extriour Design</h1>
-                    
-                </div>
-                <div class="back">
-                    <img src="/assets/imgs/bedroom.jpg" alt="">
-
-                    <h2>Exteriour Design</h2>
-
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur ex nulla expedita, officiis vitae,</p>
-                </div>
-            </div> 
-            </div>
-            <div class="cardContainer">
-      
-=======
             <div class="card-parent">
->>>>>>> 43820c3e7b8edc4fd63a853b2bd9c376eb231861
                 <div class="card">
 
                     <div class="front">
@@ -137,31 +55,6 @@
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur ex nulla expedita, officiis vitae,</p>
                     </div>
 
-<<<<<<< HEAD
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur ex nulla expedita, officiis vitae,</p>
-                </div>
-            </div>  
-            </div>
-
-            <div class="cardContainer">
-
-                     <div class="card">
-                <div class="front">
-                    <i class="fa -solid fa-cube"></i>
-                    
-                    <h1>Lighting Design</h1>
-                    
-                </div>
-                <div class="back">
-                    <img src="/assets/imgs/bedroom.jpg" alt="">
-                    
-                    <h2>Best Lighting Design</h2>
-                    
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur ex nulla expedita, officiis vitae,</p>
-                </div>
-            </div>
-            </div>
-=======
                 </div>
             </div>
             <div class="card-parent">
@@ -252,7 +145,6 @@
             </div>
 
 
->>>>>>> 43820c3e7b8edc4fd63a853b2bd9c376eb231861
         </section>
 
         <div id="questions">
@@ -328,6 +220,14 @@
             </p>
         </div>
     </footer>
+
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.getElementById('nav-links');
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+    </script>
 
 </body>
 </html>

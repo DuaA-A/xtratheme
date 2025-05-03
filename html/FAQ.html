@@ -4,29 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ</title>
+    <link rel="stylesheet" href="../assets/CSS/nav&footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/CSS/general.css">
+    <script src="https://kit.fontawesome.com/07943ce9e9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../assets/CSS/FAQ.css">
 
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo"> 
-            <a href="../index.html"><img src="/assets/imgs/logo3.png" alt="Logo" width="200px"></a>
-        </div>
-        <ul class="nav-links">
-            <li><a href="../index.html" >Home</a></li>
-            <li><a href="About.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="projects.html" >Projects</a></li>
-            <li><a href="FAQ.html" class="active">FAQ</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="Contact.html" >Contact</a></li>
-        </ul>
-    </nav>
-    <div class="hero">
-        <h1>FAQ</h1>
-    </div>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/html/home.html"><img src="/assets/imgs/logo3.png" alt="Logo"></a>
+            </div>
+            <div class="menu-icon" id="menu-icon">☰</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="FAQ.html" class="active">FAQ</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Blog</h1>
+    </header>
+
 <section class="first-view">
 
     <section class="faq-section">
@@ -124,5 +129,14 @@
             </p>
         </div>
     </footer>
+
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.getElementById('nav-links');
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+    </script>
+
 </body>
 </html>
