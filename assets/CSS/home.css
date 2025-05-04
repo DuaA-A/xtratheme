@@ -336,8 +336,11 @@ ul.nav-links{
 
 .second-view{
     position: relative;
-    height: 70vh;
+    min-height: 70vh;
     margin-bottom: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .services {
@@ -1366,13 +1369,13 @@ a.services-button:hover{
     }
     .team{
         position: relative;
-         margin-top: 90%; /*I can't fix this */
+         /*margin-top: 90%; !*I can't fix this *!*/
     }
     .row2 .card.contact{
         width:fit-content;
         padding: 15% 2%;
         padding-right: 5%;
-        margin-bottom: 85%;/*I can't fix this */
+        /*margin-bottom: 85%;!*I can't fix this *!*/
     }
     .services-button{
         margin-top: 8%;
