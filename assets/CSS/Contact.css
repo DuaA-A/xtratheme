@@ -24,72 +24,6 @@
     width: 1170px;
   }
 }
-.header{
-    position: absolute;
-    z-index: 2;
-}
-/* header */
-.header .container{
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px 50px;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(255,255,255,0));
-    z-index: 10;
-}
-.logo img{
-    width: 120px;
-}
-
-ul.nav-links{
-    display: flex;
-    gap:30px;
-    list-style: none;
-
-}
-/* .nav-links li{
-    display: inline-block;
-} */
-.nav-links a{
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    position: relative;
-
-}
-.nav-links a.active {
-    color: var(--mainColor);
-    
-}
-.nav-links a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 30%;
-    height: 2px;
-    background:var(--mainColor);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease;
-}
-
-.nav-links a:hover::after {
-    transform: scaleX(1);
-}
-
-.nav-links a:hover {
-    color: var(--mainColor);
-}
-.nav-links a.active::after{
-    transform: scale(1);
-}
-/* end header */
 
 /* hero section */
 .hero {
@@ -284,7 +218,7 @@ textarea::placeholder {
   height: 500px;
 }
 
-@media (max-width: 768px) {
+@media (max-width:1205px){
   .map {
     flex-direction: column;
     align-items: center;
@@ -314,7 +248,11 @@ textarea::placeholder {
     width: 100%;
   }
 }
-
+@media (max-width:1350px)and (min-width:1200px){
+  .map .map-photo img{
+    width:500px;
+  }
+}
 @media (max-width: 480px) {
   .map form .text h3 {
     font-size: 1.1em;

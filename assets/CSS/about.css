@@ -243,7 +243,8 @@
 }
 
 .container .team-cards {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
   gap: 30px;
   width: 75%;
 }
@@ -313,13 +314,12 @@
   color: var(--mainColor);
   background-color: black;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1400px) {
   .team .container {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-
   .team .container .left-part {
     width: 80%;
     text-align: center;
@@ -332,13 +332,12 @@
   }
   .container .team-cards {
     width: 100%;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
-
   .container .team-cards .card {
-    width: 90%;
     max-width: 400px;
-    border: 10px solid black;
+    border: 15px solid black;
   }
 }
 
@@ -347,9 +346,10 @@
     width: 100%;
     text-align: center;
   }
-
   .container .team-cards {
-    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    grid-template-columns: 1fr; 
     align-items: center;
   }
   .team .container .left-part .contact {
@@ -358,9 +358,7 @@
     justify-content: center;
     align-items: center;
   }
-
   .container .team-cards .card {
-    width: 100%;
     max-width: 350px;
   }
 }
@@ -369,7 +367,6 @@
   .team .container {
     gap: 30px;
   }
-
   .team .container .left-part {
     gap: 30px;
   }
@@ -379,10 +376,8 @@
     justify-content: center;
     align-items: center;
   }
-
   .container .team-cards .card {
-    width: 100%;
-    max-width: 300px;
+    max-width: 400px;
   }
 }
 @media (max-width: 992px) {
@@ -390,6 +385,7 @@
     text-align: center;
   }
 }
+
 
 /* end teams */
 
