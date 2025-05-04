@@ -125,3 +125,12 @@ h2 {
 .second-view {
   margin-left: 160px;
 }
+
+@media (max-width: 768px) {
+  .first-view{
+    flex-direction: column;
+  }
+  .second-view{
+    margin: auto;
+  }
+}

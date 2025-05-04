@@ -1,4 +1,20 @@
-
+:root{
+    --mainColor:#FFD426;
+    --secondColor:#FFDF61;
+    --thirdColor:#ffe57f;
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+::selection {
+    background-color: var(--mainColor);
+    color: white;
+}
+/* end of nav */
 
 .first-view{
     height: 100vh;
@@ -192,11 +208,8 @@
 
 .second-view{
     position: relative;
-    min-height: 70vh;
+    height: 70vh;
     margin-bottom: 2%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
 .services {
@@ -297,7 +310,7 @@ a.about{
     display: inline-block;
     width: 11%;
     height:3px;
-    top: 35%;
+    top: 33%;
     background-color: var(--mainColor);
     margin: 0;
     margin-left: 3%;
@@ -857,10 +870,10 @@ a.projects{
 .container .team-cards{
     display: flex;
     gap: 3%;
-    width: 40%;
+    /* width: 40%; */
     /* padding-right: 20px; */
     justify-content: space-around;
-    margin-right: 25%;
+    /* margin-right: 25%; */
 
 }
 
@@ -986,7 +999,7 @@ transition: trnsform 0.5s ease, background-color 0.3s ease;
     }
 
     .team .container .left-part {
-        gap: 30px;
+        gap: 40px;
     }
 
     .team .container .left-part .contact {
@@ -998,7 +1011,14 @@ transition: trnsform 0.5s ease, background-color 0.3s ease;
 
     .container .team-cards .card {
         width: 100%;
-        max-width: 300px;
+        /* margin-left: 10%; */
+        align-items: center;
+    }
+    .container .team-cards{
+        margin-right:0 ;
+    }
+    .container .team-cards .card2, .card3{
+        display: none;
     }
 }
 
@@ -1022,6 +1042,7 @@ transition: trnsform 0.5s ease, background-color 0.3s ease;
 
 .services-section .row1, .row2{
     display: flex;
+    /*  */
     gap: 2%;
     margin: 0%;
     padding: 0%;
@@ -1029,16 +1050,17 @@ transition: trnsform 0.5s ease, background-color 0.3s ease;
 .row2{
     flex-direction: row-reverse;
 }
+
 .row2 .card.contact{
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold;
     background: black;
     color: white;
-    /* width: 620px; */
+    width:580px;
     font-size: 2.2em;
     /* height: 270px; */
-    padding:1% 13.3% 1% 2%;
+    padding:1% 13.5% 1% 2%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -1062,17 +1084,17 @@ transition: trnsform 0.5s ease, background-color 0.3s ease;
     /* transform: rotateY(180deg); */
 }
 .row1 .ourService{
-    text-align: center;
+    text-align:end;
     font-size: 1.5rem;
     font-weight: bold;
     background: black;
     color: white;
-    width: 620px;
+    width: 615px;
     padding: 110px 0;
     font-size: 35px;
     left: 0;
-    padding-right: 100px;
-    height: 270px;
+    padding-right: 8%;
+    /* height: 270px; */
 }
 
 .services-section  .ourService::before{
@@ -1080,6 +1102,8 @@ transition: trnsform 0.5s ease, background-color 0.3s ease;
     position: absolute;
     width: 220px;
     height:2px;
+    top: 30%;
+    left: 3%;
     background-color: var(--mainColor);
     margin: 0;
     margin-right: 12px;
@@ -1193,7 +1217,7 @@ a.services-button:hover{
         text-align: center;
         padding-left: 10%;
         font-size: 30px;
-        width: 95%;
+        width: 89%;
         /* padding: 15%; */
     }
     .ourService::before{
@@ -1212,10 +1236,10 @@ a.services-button:hover{
         transform: rotate(90deg);
     } 
     .row1 .card .front,.row2 .card .front{
-        margin-left: 7%;
+        margin-left: 13%;
     }
     .row1 .card .back, .row2 .card .back{
-        margin-right: 4.5%;
+        margin-right: 10.5%;
     }
     .row1 .card{
         margin-top: 5%;
@@ -1225,13 +1249,13 @@ a.services-button:hover{
     }
     .team{
         position: relative;
-         /*margin-top: 90%; !*I can't fix this *!*/
+         margin-top: 90%; /*I can't fix this */
     }
     .row2 .card.contact{
         width:fit-content;
         padding: 15% 2%;
         padding-right: 5%;
-        /*margin-bottom: 85%;!*I can't fix this *!*/
+        margin-bottom: 85%;/*I can't fix this */
     }
     .services-button{
         margin-top: 8%;
@@ -1239,10 +1263,14 @@ a.services-button:hover{
     }
     .ourTeam{
         text-align: center;
+        /* margin-bottom: 5%; */
+    }
+    .left-part{
+        margin-bottom: 8%;
     }
     .team #line::before{
-        top: 2.5%;
-        left: 40%;
+        top: 2.8%;
+        left: 29%;
     }
 }
 
@@ -1329,7 +1357,7 @@ a.services-button:hover{
         margin-top: 15px;
         gap: 20px;
         position: relative;
-    left: 5px;    
+        left: 5px;    
     }
 }
 
@@ -1372,7 +1400,7 @@ a.services-button:hover{
     width: 11%;
     height:3px;
     background-color: var(--mainColor);
-    margin-top: 8.5%;
+    /* margin-top: 8.5%; */
     left: 41%; 
     margin-left: 3%;
     z-index: -1;
@@ -1541,3 +1569,56 @@ a.services-button:hover{
     }
 }
 
+@media screen and (max-width: 760px){
+    .decorTitle{
+        font-size: 25px;
+    }
+    .decorative{
+        margin: 0;
+        margin-top: 10%;
+    }
+    .img-container .big-dotted{
+        width: 100%;
+        height: 60%;
+    }
+    .img-container img{
+        left:0;
+        width: 410px;
+        /* width: 110%; */
+        margin-right: 5%;
+    }
+    .decorative .line::before{
+        margin-top: 0%;
+    }
+    .loader.bottomLeft{
+        top: 45%;
+    }
+    .loader.bottomRight{
+        top: 15%;
+    }
+    .loader.center{
+        top: 40%;
+    }
+    .stat-title{
+        height: 300px;
+        padding-top: 30%;
+    }
+    .stat.stat-title h2::before {
+        display: none;
+    }
+    .stats-container{
+        justify-content: center;
+        flex-direction: column;
+        padding: 0;
+    }
+    .stats-container .right{
+        flex-direction: column;
+        gap: 1%;
+        margin: 0%;
+        align-items: center;
+        justify-content: center;
+    }
+    
+
+
+}
