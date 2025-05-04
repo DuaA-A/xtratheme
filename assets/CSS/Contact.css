@@ -1,31 +1,28 @@
-
-:root{
-    --mainColor:#FFD426;
-    --secondColor:#FFDF61;
-    --thirdColor:#ffe57f;
-    
+:root {
+  --mainColor: #ffd426;
+  --secondColor: #ffdf61;
+  --thirdColor: #ffe57f;
 }
-.container{
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-left: auto;
-    margin-right: auto;
-
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media (min-width: 768px) {
-.container{
+  .container {
     width: 760px;
-}    
+  }
 }
 @media (min-width: 992px) {
-.container{
+  .container {
     width: 970px;
-}    
+  }
 }
 @media (min-width: 1200px) {
-.container{
+  .container {
     width: 1170px;
-}    
+  }
 }
 .header{
     position: absolute;
@@ -95,340 +92,339 @@ ul.nav-links{
 /* end header */
 
 /* hero section */
-.hero{
+.hero {
+  background-image: url("../imgs/brd.jpg");
 
-    background-image: url('../imgs/brd.jpg');
-    
-    height: 60vh;
-    position:relative;
-    margin-top: 0;
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-position: center bottom;
-    display: flex;
-    align-items: end;
-    justify-content: center;
- 
+  height: 60vh;
+  position: relative;
+  margin-top: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  display: flex;
+  align-items: end;
+  justify-content: center;
 }
-.hero h1{
-    font-size: 3em;
-    color: white;
-    margin-bottom: 60px;
-    
-    
+.hero h1 {
+  font-size: 3em;
+  color: white;
+  margin-bottom: 60px;
 }
 @media (max-width: 992px) {
-    .hero h1 {
-        font-size: 2.5em;
-        text-align: center;
-    }
+  .hero h1 {
+    font-size: 2.5em;
+    text-align: center;
+  }
 }
 
 @media (max-width: 768px) {
-    .hero {
-        height: 50vh;
-    }
+  .hero {
+    height: 50vh;
+  }
 
-    .hero h1 {
-        font-size: 2em;
-    }
+  .hero h1 {
+    font-size: 2em;
+  }
 }
 /* end hero section */
 /* begin contact */
-.contact{
-    margin-top: 100px;
+.contact {
+  margin-top: 100px;
 }
-.contact .container{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.contact .container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-.contact .container .card{
- display: flex;
- gap: 20px;
- flex-wrap: wrap;
- cursor: pointer;
- 
+.contact .container .card {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  cursor: pointer;
 }
-.container .card:hover .icon i{
-    background-color: black !important;
-    color: var(--mainColor);
-    transition: background-color 0.5s ease;
-    -webkit-transition: background-color 0.5s ease;
-    -moz-transition: background-color 0.5s ease;
-    -ms-transition: background-color 0.5s ease;
-    -o-transition: background-color 0.5s ease;
+.container .card:hover .icon i {
+  background-color: black !important;
+  color: var(--mainColor);
+  transition: background-color 0.5s ease;
+  -webkit-transition: background-color 0.5s ease;
+  -moz-transition: background-color 0.5s ease;
+  -ms-transition: background-color 0.5s ease;
+  -o-transition: background-color 0.5s ease;
 }
-.contact .container .card .icon i{
-    font-size: 2em;
-    background-color: var(--mainColor);
-    padding: 20px;
-    
+.contact .container .card .icon i {
+  font-size: 2em;
+  background-color: var(--mainColor);
+  padding: 20px;
 }
-.contact .container .card .text{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: flex-start;
+.contact .container .card .text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
 }
-.contact .container .card .text h3{
-    font-size: 2em;
+.contact .container .card .text h3 {
+  font-size: 2em;
 }
-.contact .container .card .text p{
-    font-size: 1.3em;
-    font-weight:100;
-    color:#0c0c0c;
+.contact .container .card .text p {
+  font-size: 1.3em;
+  font-weight: 100;
+  color: #0c0c0c;
 }
 @media (max-width: 480px) {
-    .contact .container {
-        align-items: center;
-        justify-content: center;
-    }
+  .contact .container {
+    align-items: center;
+    justify-content: center;
+  }
 
-    .contact .container .card {
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-    }
+  .contact .container .card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
 
-    .contact .container .card .icon i {
-        font-size: 1.2em;
-        padding: 10px;
-    }
+  .contact .container .card .icon i {
+    font-size: 1.2em;
+    padding: 10px;
+  }
 
-    .contact .container .card .text {
-        margin-top: 20px;
-        text-align: center;
-        align-items: center;
-    }
+  .contact .container .card .text {
+    margin-top: 20px;
+    text-align: center;
+    align-items: center;
+  }
 
-    .contact .container .card .text h3 {
-        font-size: 1.2em;
-    }
+  .contact .container .card .text h3 {
+    font-size: 1.2em;
+  }
 
-    .contact .container .card .text p {
-        font-size: 0.9em;
-    }
+  .contact .container .card .text p {
+    font-size: 0.9em;
+  }
 }
 /* end contact */
 
 /* start form */
-.map{
-    margin-top: 100px;
-    background-color: black;
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-
+.map {
+  margin-top: 100px;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }
 
+.map form {
+  padding: 20px;
+  margin-left: 50px;
+}
+.map form .text {
+  margin-bottom: 40px;
+}
+.map form .text h3 {
+  color: white;
+  font-size: 1.3em;
+  font-family: sans-serif;
+}
+.map form .text::after {
+  content: "";
+  width: 30px;
+  height: 2px;
+  background-color: var(--mainColor);
+  display: block;
+  margin-top: 20px;
+}
+.map form input[type="text"],
+[type="email"],
+select {
+  margin-bottom: 10px;
+  padding: 10px 5px;
+  margin-right: 10px;
+  width: 250px;
+  background-color: var(--mainColor);
 
-.map  form{
-    padding: 20px;
-    margin-left: 50px;
-
+  border: none;
 }
-.map  form .text{
-    margin-bottom: 40px;
-    
+.map form input[type="submit"] {
+  margin-top: 10px;
+  cursor: pointer;
+  padding: 10px;
+  display: block;
+  background-color: white;
+  border: none;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
 }
-.map  form .text h3{
-color: white;
-    font-size: 1.3em;
-    font-family: sans-serif;
-
+.map form input[type="submit"]:hover {
+  background-color: var(--mainColor);
 }
-.map  form .text::after{
-    content: "";
-    width: 30px;
-    height: 2px;
-    background-color: var(--mainColor);
-    display: block;
-    margin-top: 20px;
-}
-.map  form input[type="text"],[type="email"],select{
-      margin-bottom: 10px; 
-      padding: 10px 5px;
-      margin-right: 10px; 
-      width: 250px; 
-      background-color: var(--mainColor); 
-      
-border: none;
-
-}
-.map form input[type="submit"] { margin-top: 10px;  cursor: pointer; padding: 10px; display: block; background-color: white; border: none; transition:0.5s ; -webkit-transition:0.5s ; -moz-transition:0.5s ; -ms-transition:0.5s ; -o-transition:0.5s ;
-}
-.map form input[type="submit"]:hover{
-    background-color: var(--mainColor);
-    
-}
-.map form input::placeholder,textarea::placeholder{
-    font-size: 0.7em;
+.map form input::placeholder,
+textarea::placeholder {
+  font-size: 0.7em;
 }
 .map form select option {
-    font-size: 0.7em !important;
+  font-size: 0.7em !important;
 }
-.map  form textarea{
-width: 515px;
-height: 100px;
-padding: 10px 5px;
-margin-bottom: 10px;
-    margin-right: 10px;
-    resize: vertical;
-    background-color: var(--mainColor);
-    border: none; 
+.map form textarea {
+  width: 515px;
+  height: 100px;
+  padding: 10px 5px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  resize: vertical;
+  background-color: var(--mainColor);
+  border: none;
 }
-.map  .map-photo {
-    
+.map .map-photo {
 }
-.map  .map-photo img {
-    height:500px;
+.map .map-photo img {
+  height: 500px;
 }
 
 @media (max-width: 768px) {
-    .map {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 100px;
-    }
+  .map {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+  }
 
-    .map form {
-        margin-left: 0;
-        width: 100%;
-        padding: 10px;
-    }
+  .map form {
+    margin-left: 0;
+    width: 100%;
+    padding: 10px;
+  }
 
-    .map form input[type="text"],
-    .map form input[type="email"],
-    .map form select {
-        width: 100%;
-        margin-right: 0;
-    }
+  .map form input[type="text"],
+  .map form input[type="email"],
+  .map form select {
+    width: 100%;
+    margin-right: 0;
+  }
 
-    .map form textarea {
-        width: 100%;
-        margin-right: 0;
-    }
+  .map form textarea {
+    width: 100%;
+    margin-right: 0;
+  }
 
-    .map .map-photo img {
-        height: auto;
-        width: 100%;
-    }
+  .map .map-photo img {
+    height: auto;
+    width: 100%;
+  }
 }
 
 @media (max-width: 480px) {
-    .map form .text h3 {
-        font-size: 1.1em;
-    }
+  .map form .text h3 {
+    font-size: 1.1em;
+  }
 
-    .map form input[type="text"],
-    .map form input[type="email"],
-    .map form select {
-        padding: 8px 5px;
-    }
+  .map form input[type="text"],
+  .map form input[type="email"],
+  .map form select {
+    padding: 8px 5px;
+  }
 
-    .map form textarea {
-        height: 80px;
-    }
+  .map form textarea {
+    height: 80px;
+  }
 }
 /* end form */
 /* call us */
-.call .container{
-    margin-top: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.call .container {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .call .card {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    align-items: center;
-    cursor: pointer;
-    transition: transform 0.5s ease-in, background-color 0.5s ease-in;
-    transform: scaleX(1);
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.5s ease-in, background-color 0.5s ease-in;
+  transform: scaleX(1);
 }
 
 .call .card:hover {
-    transform: scaleX(1.05);
+  transform: scaleX(1.05);
 }
 
 .call .card:hover i {
-    background-color: black;
-    color: var(--mainColor);
-    transition: background-color 0.5s ease-in;
+  background-color: black;
+  color: var(--mainColor);
+  transition: background-color 0.5s ease-in;
 }
-.call .card .text{
-    display: flex;
-    gap: 10px;
+.call .card .text {
+  display: flex;
+  gap: 10px;
 }
-.call .card i{
-    font-size: 2em;
-    background-color: var(--mainColor);
-    padding: 20px;
-    cursor: pointer;
-  
+.call .card i {
+  font-size: 2em;
+  background-color: var(--mainColor);
+  padding: 20px;
+  cursor: pointer;
 }
-.call .card h3{
-    font-size: 1.7em;
-    text-transform: uppercase;
-    font-family: sans-serif;
-    font-weight: lighter;
-    letter-spacing: 2px;
+.call .card h3 {
+  font-size: 1.7em;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: lighter;
+  letter-spacing: 2px;
 }
-.call .card p{
-    font-size: 1.7em;
-    color: #0c0c0c;
-    font-weight: 300;
+.call .card p {
+  font-size: 1.7em;
+  color: #0c0c0c;
+  font-weight: 300;
 }
 @media (max-width: 768px) {
-    .call .container {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
+  .call .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
 
-    .call .card {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
+  .call .card {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
 
-    .call .card .text {
-        flex-direction: column;
-        align-items: center;
-    }
+  .call .card .text {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .call .card i {
-        font-size: 1.5em;
-        padding: 15px;
-    }
+  .call .card i {
+    font-size: 1.5em;
+    padding: 15px;
+  }
 
-    .call .card h3 {
-        font-size: 1.5em;
-        letter-spacing: 1px;
-    }
+  .call .card h3 {
+    font-size: 1.5em;
+    letter-spacing: 1px;
+  }
 
-    .call .card p {
-        font-size: 1.3em;
-    }
+  .call .card p {
+    font-size: 1.3em;
+  }
 }
 
 @media (max-width: 480px) {
-    .call .card i {
-        font-size: 1.2em;
-        padding: 10px;
-    }
+  .call .card i {
+    font-size: 1.2em;
+    padding: 10px;
+  }
 
-    .call .card h3 {
-        font-size: 1.2em;
-    }
+  .call .card h3 {
+    font-size: 1.2em;
+  }
 
-    .call .card p {
-        font-size: 1em;
-    }
+  .call .card p {
+    font-size: 1em;
+  }
 }
 
 /* call us */
