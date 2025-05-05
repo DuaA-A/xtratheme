@@ -154,7 +154,7 @@ header nav ul .active {
 .nav-links a::after {
   content: "";
   position: absolute;
-  left: 0px;
+  left: 21px;
   bottom: 6px;
   width: 30%;
   height: 2px;
