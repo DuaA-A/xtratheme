@@ -471,6 +471,9 @@ section {
   #gallary {
     display: none;
   }
+  #choose{
+    width: auto;
+  }
 }
 
 @media (min-width: 769px) {

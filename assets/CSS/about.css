@@ -331,7 +331,7 @@
     align-items: center;
   }
   .container .team-cards {
-    width: 100%;
+    /* width: 100%; */
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }

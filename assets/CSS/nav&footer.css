@@ -176,7 +176,7 @@ header nav ul .active {
 .navbar {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 21px;
   display: flex;
   width: 100%;
   justify-content: space-around;
@@ -250,6 +250,9 @@ ul.nav-links {
       position: fixed;
   }
 
+  .navbar{
+    left: 0;
+  }
   .menu-icon {
       display: block;
       border: 1px solid white;

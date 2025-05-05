@@ -129,8 +129,15 @@ h2 {
 @media (max-width: 768px) {
   .first-view{
     flex-direction: column;
+    margin-bottom: 6%;
   }
   .second-view{
     margin: auto;
+  }
+  .contact-form {
+    width:80%;
+  }
+  .faq-section{
+    width: 80%;
   }
 }

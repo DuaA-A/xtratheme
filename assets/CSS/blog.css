@@ -240,6 +240,9 @@ aside #search button:hover {
 
     /* margin: 0 auto; */
   }
+  main{
+    margin: 10vb 2vb;
+  }
 }
 
 #tags {

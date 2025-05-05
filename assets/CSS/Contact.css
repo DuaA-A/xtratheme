@@ -13,6 +13,7 @@
   .container {
     width: 760px;
   }
+
 }
 @media (min-width: 992px) {
   .container {
@@ -362,6 +363,9 @@ textarea::placeholder {
 
   .call .card p {
     font-size: 1em;
+  }
+  .contact .container .card .text h3{
+    font-size: 20px;
   }
 }
 

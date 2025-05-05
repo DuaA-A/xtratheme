@@ -397,8 +397,9 @@ a.about{
         height: 80px;
         font-size: 20px;
     }
-    .arrow{
-        display: none;
+    .more:hover{
+        /* display: none; */
+        scale: calc(1.1);
     }
     .hor-bar{
         display: block;
@@ -458,8 +459,8 @@ a.about{
 
     a.about{
         position: relative;
-        font-size: 12px;
-        padding: 10px;
+        font-size: 14px;
+        padding: 13px;
         /* width: 200px; */
     }
     .number::before {
@@ -563,10 +564,11 @@ filter: saturate(0);
 
 @media (max-width: 768px){
     .works-title{
-        position: relative;
-        
-        left: 20%;
-        font-size: 28px;
+        /* position: relative; */
+        align-items: center;
+        /* left: 20%; */
+        padding-left: 35%;
+        font-size: 30px;
     }
     .works-title::before{
         display: none;
@@ -1235,6 +1237,7 @@ a.services-button:hover{
         z-index: -1;
         transform: rotate(90deg);
     } 
+
     .row1 .card .front,.row2 .card .front{
         margin-left: 13%;
     }
@@ -1601,7 +1604,7 @@ a.services-button:hover{
     }
     .stat-title{
         height: 300px;
-        padding-top: 30%;
+        padding-top: 25%;
     }
     .stat.stat-title h2::before {
         display: none;
@@ -1619,6 +1622,8 @@ a.services-button:hover{
         justify-content: center;
     }
     
-
+    .decorative #line::before{
+        margin-top: 12.5%;
+    }
 
 }
