@@ -724,7 +724,7 @@ a.projects{
 } */
 
 .second-section .img-container img{
-    padding-right: 50px;
+    padding-right: 20px;
 }
 
 @media (max-width: 768px){
@@ -1104,7 +1104,7 @@ transition: trnsform 0.5s ease, background-color 0.3s ease;
     position: absolute;
     width: 220px;
     height:2px;
-    top: 30%;
+    top: 29%;
     left: 3%;
     background-color: var(--mainColor);
     margin: 0;
@@ -1403,7 +1403,7 @@ a.services-button:hover{
     width: 11%;
     height:3px;
     background-color: var(--mainColor);
-    /* margin-top: 8.5%; */
+    margin-top:10%;
     left: 41%; 
     margin-left: 3%;
     z-index: -1;
