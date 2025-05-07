@@ -176,7 +176,6 @@ header nav ul .active {
 .navbar {
   position: absolute;
   top: 0;
-  /* left: 21px; */
   display: flex;
   width: 100%;
   justify-content: space-around;
