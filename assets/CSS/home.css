@@ -1080,7 +1080,7 @@ transition: trnsform 0.5s ease, background-color 0.3s ease;
     background: var(--mainColor);
     color: black;
     /* padding: 15%; */
-    width: auto;
+    width: 19.5em;
     height: 14.5em;
     display: flex;
     flex-direction: column;
@@ -1090,6 +1090,7 @@ transition: trnsform 0.5s ease, background-color 0.3s ease;
     transition: 0.5s ease-in-out;
     backface-visibility: hidden;
     /* transform: rotateY(180deg); */
+    margin: auto;
 }
 .row1 .ourService{
     text-align:end;
@@ -1245,12 +1246,16 @@ a.services-button:hover{
     } 
 
     .row1 .card .front,.row2 .card .front{
-        margin-left: auto;
+        margin: auto;
         /* width: 90%; */
+
     }
     .row1 .card .back, .row2 .card .back{
         margin-right:auto;
         /* width: 90%; */
+        left: 11%;
+        margin: 0;
+        right: 0;
     }
     .row1 .card{
         margin-top: 5%;
