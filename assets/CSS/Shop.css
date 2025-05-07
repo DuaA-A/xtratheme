@@ -26,7 +26,7 @@
 
 /* hero section */
 .hero {
-  background-image: url("../imgs/brd.jpg");
+  background-image: url("../assets/imgs/brd.jpg");
 
   height: 60vh;
   position: relative;
