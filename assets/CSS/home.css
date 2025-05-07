@@ -18,7 +18,7 @@
 
 .first-view{
     height: 100vh;
-    background:url("/assets/imgs/slide4.jpg") no-repeat center/cover;
+    /* background:url("/assets/imgs/slide4.jpg") no-repeat center/cover; */
 
 }
 
@@ -138,7 +138,10 @@
     .first-view{
         position: relative;
         height: 50%;
-        background:url(/assets/imgs/slide1.jpg) no-repeat center/contain;
+        /* background:url(/assets/imgs/slide1.jpg) no-repeat center/contain; */
+    }
+    img#main{
+        height: 50vh !important;
     }
     .main-content{
         top: 45%;
@@ -403,6 +406,7 @@ a.about{
     }
     .hor-bar{
         display: block;
+        position: fixed;
     }
     .aboutUs{
         position: relative;
@@ -436,7 +440,7 @@ a.about{
 
     .contentAbout{
         font-size: 10px;
-        width: 400px;
+        width: 100%;
         line-height: 1.7; 
     }
 
@@ -491,7 +495,7 @@ a.about{
     flex-direction: column;
     background-color: black;
     align-items: center;
-    min-height: 100vh;
+    max-height: 100vh;
     padding:20px 0px ;
     
 
@@ -576,7 +580,7 @@ filter: saturate(0);
 
     .third-view{
         position: relative; 
-        margin-top: 50%;
+        margin-top: 100%;
     }
     .grid-container{
         position: relative;
@@ -665,6 +669,7 @@ filter: saturate(0);
     width:100%;
     line-height: 1.5; 
     text-align: justify;
+    padding: 0 10%
 }
 
 .projects .projects-icon{
@@ -799,7 +804,7 @@ a.projects{
     width: 11%;
     height:3px;
     background-color: var(--mainColor);
-    margin-top: 8.5%;
+    margin-top: 17%;
     left: 0%; 
     margin-left: 3%;
     vertical-align: middle;
@@ -893,7 +898,7 @@ transition: trnsform 0.5s ease, background-color 0.3s ease;
 }
 
 .container .team-cards .card .image{
-    width: 250px;
+    width: 245px;
     border: 30px solid black;
     filter:grayscale(100%);
     -webkit-filter:grayscale(100%);
@@ -1074,7 +1079,7 @@ transition: trnsform 0.5s ease, background-color 0.3s ease;
     background: var(--mainColor);
     color: black;
     /* padding: 15%; */
-    width: 19.3em;
+    width: auto;
     height: 14.5em;
     display: flex;
     flex-direction: column;
@@ -1202,7 +1207,7 @@ a.services-button:hover{
 }
 @media (max-width: 768px) {
     .second-section .img-container{
-        margin-bottom: 40%;/*I can't fix this */
+        margin-bottom: 60%;
     }
     .services-section{
         margin-top: 95%;/*I can't fix this */
@@ -1219,7 +1224,7 @@ a.services-button:hover{
         text-align: center;
         padding-left: 10%;
         font-size: 30px;
-        width: 89%;
+        width: 100%;
         /* padding: 15%; */
     }
     .ourService::before{
@@ -1239,10 +1244,12 @@ a.services-button:hover{
     } 
 
     .row1 .card .front,.row2 .card .front{
-        margin-left: 13%;
+        margin-left: auto;
+        /* width: 90%; */
     }
     .row1 .card .back, .row2 .card .back{
-        margin-right: 10.5%;
+        margin-right:auto;
+        /* width: 90%; */
     }
     .row1 .card{
         margin-top: 5%;
@@ -1267,13 +1274,14 @@ a.services-button:hover{
     .ourTeam{
         text-align: center;
         /* margin-bottom: 5%; */
+        padding-top: 35%;
     }
     .left-part{
         margin-bottom: 8%;
     }
     .team #line::before{
-        top: 2.8%;
-        left: 29%;
+        top: 14%;
+        left: 23%;
     }
 }
 
@@ -1585,22 +1593,27 @@ a.services-button:hover{
         height: 60%;
     }
     .img-container img{
-        left:0;
-        width: 410px;
-        /* width: 110%; */
+        left: 0;
+        width: 100%;
         margin-right: 5%;
+        padding: 0%;
     }
     .decorative .line::before{
         margin-top: 0%;
     }
     .loader.bottomLeft{
         top: 45%;
+        display: none;
     }
     .loader.bottomRight{
-        top: 15%;
+        top: 11%;
+    }
+    .loader.topRight{
+        top: 30%;
     }
     .loader.center{
         top: 40%;
+        display: none;
     }
     .stat-title{
         height: 300px;
