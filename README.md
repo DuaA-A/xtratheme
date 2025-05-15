@@ -3,6 +3,7 @@
 ## Overview
 Xtatheme is a modern and stylish interior design website that showcases various services, projects, and a shop for home decoration. The website features a sleek and elegant design to highlight interior and exterior design solutions.
 
+Check it out now: https://duaa-a.github.io/xtratheme/
 ## Features
 - **Navigation Bar**: Provides links to various sections, including Home, About, Services, Projects, FAQ, Blog, Shop, and Contact.
 - **Home Page**: Showcases an interactive layout with banners, images, and service highlights.
